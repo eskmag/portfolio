@@ -18,11 +18,11 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Portfolio Website",
-    description: "A responsive portfolio website showcasing my projects and skills. Built with modern React and styled with Tailwind CSS.",
-    link: "https://github.com/eskmag/portfolio",
+    title: "Climate Change Dashboard",
+    description: "A data visualization dashboard for climate change metrics.",
+    link: "https://github.com/eskmag/climate-dashboard",
     deployed_link: "#",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    technologies: ["Python", "Streamlit", "Pandas"],
   },
   {
     title: "Coming Soon Project",

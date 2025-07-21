@@ -162,7 +162,7 @@ export const Stats: React.FC = () => {
               <div className="text-2xl mb-2">🚀</div>
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Focus Areas</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Web Development, Machine Learning, and Sustainable Tech Solutions
+                Web Development, Data Visualization, and Sustainable Tech Solutions
               </p>
             </div>
           </div>

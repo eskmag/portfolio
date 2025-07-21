@@ -43,7 +43,7 @@ export const About: React.FC = () => (
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl">
             <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">🎓 Currently Learning</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Advanced machine learning algorithms, React ecosystem, and cloud computing with focus on sustainable tech solutions.
+              Data science, data visualization and computer technology focusing on operating systems and algorithms.
             </p>
           </div>
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
