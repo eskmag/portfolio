@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useGitHubStats } from "@/hooks/useGitHubStats";
 
 export const Stats: React.FC = () => {
-  const { publicRepos, totalStars, followers, loading, error } = useGitHubStats("eskmag");
+  const { publicRepos, loading, error } = useGitHubStats("eskmag");
 
   // Static stats that don't change often
   const staticStats = [
