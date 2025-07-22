@@ -133,7 +133,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
       className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-2"
     >
       <TypingText 
-        text="Informatics Student | Web Developer | Tech Enthusiast"
+        text="Informatics Student | Aspiring Developer | Tech Enthusiast"
         speed={40}
         delay={2500}
         showCursor={true}
