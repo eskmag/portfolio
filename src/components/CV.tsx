@@ -22,7 +22,7 @@ export const CV: React.FC = () => (
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
-      My CV will be available for download soon. In the meantime, feel free to explore my projects and contact me directly.
+      Download my CV to learn more about my education, experience, and technical skills.
     </motion.p>
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -30,13 +30,15 @@ export const CV: React.FC = () => (
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.4 }}
     >
-      <Button 
-        variant="outline" 
-        className="text-lg px-6 py-3 opacity-50 cursor-not-allowed" 
-        disabled
-      >
-        <FileText className="w-5 h-5 mr-2" /> CV Coming Soon
-      </Button>
+      <a href="/cv/Eskil_Magnussen_CV.pdf" download="Eskil_Magnussen_CV.pdf">
+        <Button 
+          variant="outline" 
+          className="text-lg px-6 py-3 hover:bg-blue-50 hover:border-blue-300 dark:hover:bg-blue-900/20 transition-all duration-300 group"
+        >
+          <FileText className="w-5 h-5 mr-2 group-hover:animate-pulse" /> 
+          Download CV
+        </Button>
+      </a>
     </motion.div>
   </section>
 );
