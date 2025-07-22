@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Mail, FileText, Sun, Moon, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
+import { TypingText } from "@/components/TypingText";
 
 interface HeaderProps {
   darkMode: boolean;
@@ -110,24 +111,48 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
       transition={{ delay: 0.2 }}
       className="text-5xl md:text-6xl font-bold mb-4"
     >
-      Hi, I'm <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Eskil Magnussen</span> 👋
+      <TypingText 
+        text="Hi, I'm "
+        speed={80}
+        delay={500}
+        showCursor={false}
+      />
+      <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+        <TypingText 
+          text="Eskil Magnussen"
+          speed={60}
+          delay={1200}
+          showCursor={false}
+        />
+      </span>
     </motion.h1>
-    <motion.p
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
       className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-2"
     >
-      Informatics Student | Web Developer | Tech Enthusiast
-    </motion.p>
-    <motion.p
+      <TypingText 
+        text="Informatics Student | Web Developer | Tech Enthusiast"
+        speed={40}
+        delay={2500}
+        showCursor={true}
+        cursorClassName="animate-pulse text-blue-500"
+      />
+    </motion.div>
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
       className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto"
     >
-      Passionate about creating digital solutions that make a difference. Currently exploring the intersection of data science and web development.
-    </motion.p>
+      <TypingText 
+        text="Passionate about creating digital solutions that make a difference. Currently exploring the intersection of data science and web development."
+        speed={25}
+        delay={2500}
+        showCursor={false}
+      />
+    </motion.div>
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

@@ -10,6 +10,7 @@ import { BackToTop } from "@/components/BackToTop";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Contact } from "@/components/Contact";
 import { Stats } from "@/components/Stats";
+import { StickyNav } from "@/components/StickyNav";
 
 const Portfolio: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -35,6 +36,7 @@ const Portfolio: React.FC = () => {
   return (
     <div className={`${darkMode ? "dark bg-gray-900 text-white" : "bg-white text-black"} scroll-smooth`}>
       <ScrollProgress />
+      <StickyNav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 py-8">
