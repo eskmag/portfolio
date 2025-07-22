@@ -21,7 +21,7 @@ export const projects: Project[] = [
     title: "Climate Change Dashboard",
     description: "A data visualization dashboard for climate change metrics.",
     link: "https://github.com/eskmag/climate-dashboard",
-    deployed_link: "#",
+    deployed_link: "https://bergen-climate-dashboard.streamlit.app",
     technologies: ["Python", "Streamlit", "Pandas"],
   },
   {
