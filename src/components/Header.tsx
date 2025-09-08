@@ -41,11 +41,11 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         className="mb-12 hidden md:block"
       >
         <ul className="flex justify-center gap-8 text-sm font-medium">
-          <li><a href="#about" className="hover:text-blue-500 transition-colors duration-300">About</a></li>
-          <li><a href="#tech-stack" className="hover:text-blue-500 transition-colors duration-300">Tech Stack</a></li>
-          <li><a href="#projects" className="hover:text-blue-500 transition-colors duration-300">Projects</a></li>
-          <li><a href="#contact" className="hover:text-blue-500 transition-colors duration-300">Contact</a></li>
-          <li><a href="#cv" className="hover:text-blue-500 transition-colors duration-300">CV</a></li>
+          <li><a href="#about" className="hover:text-green-500 transition-colors duration-300">About</a></li>
+          <li><a href="#tech-stack" className="hover:text-green-500 transition-colors duration-300">Tech Stack</a></li>
+          <li><a href="#projects" className="hover:text-green-500 transition-colors duration-300">Projects</a></li>
+          <li><a href="#contact" className="hover:text-green-500 transition-colors duration-300">Contact</a></li>
+          <li><a href="#cv" className="hover:text-green-500 transition-colors duration-300">CV</a></li>
         </ul>
       </motion.nav>
 
@@ -59,11 +59,11 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             className="mb-8 md:hidden bg-gray-50 dark:bg-gray-800 rounded-lg p-4"
           >
             <ul className="flex flex-col gap-4 text-sm font-medium">
-              <li><a href="#about" onClick={toggleMobileMenu} className="block py-2 hover:text-blue-500 transition-colors duration-300">About</a></li>
-              <li><a href="#tech-stack" onClick={toggleMobileMenu} className="block py-2 hover:text-blue-500 transition-colors duration-300">Tech Stack</a></li>
-              <li><a href="#projects" onClick={toggleMobileMenu} className="block py-2 hover:text-blue-500 transition-colors duration-300">Projects</a></li>
-              <li><a href="#contact" onClick={toggleMobileMenu} className="block py-2 hover:text-blue-500 transition-colors duration-300">Contact</a></li>
-              <li><a href="#cv" onClick={toggleMobileMenu} className="block py-2 hover:text-blue-500 transition-colors duration-300">CV</a></li>
+              <li><a href="#about" onClick={toggleMobileMenu} className="block py-2 hover:text-green-500 transition-colors duration-300">About</a></li>
+              <li><a href="#tech-stack" onClick={toggleMobileMenu} className="block py-2 hover:text-green-500 transition-colors duration-300">Tech Stack</a></li>
+              <li><a href="#projects" onClick={toggleMobileMenu} className="block py-2 hover:text-green-500 transition-colors duration-300">Projects</a></li>
+              <li><a href="#contact" onClick={toggleMobileMenu} className="block py-2 hover:text-green-500 transition-colors duration-300">Contact</a></li>
+              <li><a href="#cv" onClick={toggleMobileMenu} className="block py-2 hover:text-green-500 transition-colors duration-300">CV</a></li>
             </ul>
           </motion.nav>
         )}
@@ -77,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
       className="mb-8 flex justify-center"
     >
       <div className="relative group">
-        <div className="w-40 h-40 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-1 shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-300">
+        <div className="w-40 h-40 rounded-full bg-gradient-to-br from-green-400  to-green-800 p-1 shadow-2xl group-hover:shadow-green-500/25 transition-all duration-300">
           <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
             {/* Profile image with fallback */}
             <img 
@@ -101,7 +101,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           </div>
         </div>
         {/* Subtle glow effect */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/20 via-purple-500/20 to-pink-500/20 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+        <div className="absolute inset-0 rounded-full group-hover:blur-2xl transition-all duration-300"></div>
       </div>
     </motion.div>
 
@@ -117,7 +117,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         delay={500}
         showCursor={false}
       />
-      <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
         <TypingText 
           text="Eskil Magnussen"
           speed={60}
@@ -137,7 +137,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         speed={40}
         delay={2500}
         showCursor={true}
-        cursorClassName="animate-pulse text-blue-500"
+        cursorClassName="animate-pulse text-green-500"
       />
     </motion.div>
     <motion.div

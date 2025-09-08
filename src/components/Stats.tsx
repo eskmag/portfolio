@@ -66,7 +66,7 @@ export const Stats: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-800 dark:via-gray-850 dark:to-gray-900">
+    <section className="py-20 bg-gradient-to-br from-green-50 via-indigo-50 to-blue-50 dark:from-gray-800 dark:via-gray-850 dark:to-gray-900">
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold mb-4 text-center"
@@ -104,14 +104,14 @@ export const Stats: React.FC = () => {
               className="text-center group"
             >
               <motion.div 
-                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group-hover:border-blue-300 dark:group-hover:border-blue-600"
+                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group-hover:border-green-300 dark:group-hover:border-green-600"
                 whileHover={{ 
                   y: -5,
                   transition: { duration: 0.2 }
                 }}
               >
                 <motion.div 
-                  className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4 relative"
+                  className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-4 relative"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}

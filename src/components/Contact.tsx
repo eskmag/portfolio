@@ -103,7 +103,7 @@ export const Contact: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <a href="mailto:eskil.magnussen@gmail.com">
-            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white">
+            <Button size="lg" className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-green-700 text-white">
               <MessageSquare className="w-5 h-5 mr-2" />
               Send me a message
             </Button>

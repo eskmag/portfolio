@@ -29,7 +29,7 @@ export const About: React.FC = () => (
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center mb-8">
           I'm an informatics student at the University of Bergen, currently specializing in Data Science. I enjoy working on web development
           projects, creating clean and accessible user interfaces, and exploring technologies that contribute to sustainable digital
-          solutions. I also share content on workstations and productivity tech.
+          solutions.
         </p>
         
         {/* Current Focus */}
@@ -49,7 +49,7 @@ export const About: React.FC = () => (
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
             <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">💡 Interests</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Data visualization, UI/UX design, productivity optimization, and creating content about tech workstations.
+              Data visualization, UI/UX design, productivity optimization, and programming for sustainability systems.
             </p>
           </div>
         </motion.div>
