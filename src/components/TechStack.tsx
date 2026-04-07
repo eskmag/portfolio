@@ -49,7 +49,7 @@ export const TechStack: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {['Python', 'PowerShell', 'Julia', 'Java', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SQLite'].map((tech) => (
+        {['Python', 'Java', 'TypeScript', 'SQL'].map((tech) => (
           <motion.span
             key={tech}
             variants={itemVariants}

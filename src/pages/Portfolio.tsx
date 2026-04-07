@@ -7,7 +7,6 @@ import { TechStack } from "@/components/TechStack";
 import { Projects } from "@/components/Projects";
 import { CV } from "@/components/CV";
 import { BackToTop } from "@/components/BackToTop";
-import { ScrollProgress } from "@/components/ScrollProgress";
 import { Contact } from "@/components/Contact";
 import { Stats } from "@/components/Stats";
 import { StickyNav } from "@/components/StickyNav";
@@ -35,7 +34,6 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className={`${darkMode ? "dark bg-gray-900 text-white" : "bg-white text-black"} scroll-smooth`}>
-      <ScrollProgress />
       <StickyNav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center">

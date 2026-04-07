@@ -43,13 +43,13 @@ export const About: React.FC = () => (
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl">
             <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">🎓 Currently Learning</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Data science, data visualization and computer technology focusing on operating systems and algorithms.
+              Studying how programming languages work, exploring semantic parsing and syntax trees. I am also learning about software architecture and design patterns through game development with Java and LibGDX.
             </p>
           </div>
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
             <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">💡 Interests</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Data visualization, UI/UX design, productivity optimization, and programming for sustainability systems.
+              Currently exploring homelabing and learing about self-hosting, as well as working with microcontrollers and embedded systems.
             </p>
           </div>
         </motion.div>
