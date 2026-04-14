@@ -30,7 +30,7 @@ export const CV: React.FC = () => (
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.4 }}
     >
-      <a href="/cv/Eskil_Magnussen_CV.pdf" download="Eskil_Magnussen_CV.pdf">
+      <a href="/cv/eskil_magnussen_cv.pdf" download="eskil_magnussen_cv.pdf">
         <Button 
           variant="outline" 
           className="text-lg px-6 py-3 hover:bg-blue-50 hover:border-blue-300 dark:hover:bg-blue-900/20 transition-all duration-300 group"

@@ -10,25 +10,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Cookbook Archive",
-    description: "A cookbook and recipe storage app built with modern web technologies. Features recipe management, search functionality, and responsive design.",
-    link: "https://github.com/eskmag/cookbook-archive",
-    deployed_link: "https://cookbookarchive.vercel.app",
-    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    featured: true,
-  },
-  {
-    title: "Climate Change Dashboard",
-    description: "A data visualization dashboard for climate change metrics.",
-    link: "https://github.com/eskmag/climate-dashboard",
-    deployed_link: "https://bergen-climate-dashboard.streamlit.app",
-    technologies: ["Python", "Streamlit", "Pandas"],
-  },
-  {
-    title: "Coming Soon Project",
-    description: "An exciting new project currently in development. Stay tuned for updates!",
-    link: "https://github.com/eskmag",
+    title: "Emergency Water Supply",
+    description: "A Streamlit app showcasing the potantial for emergency water supply by utilizing rainfall-patterns in Bergen.",
+    link: "https://github.com/eskmag/bergen-smart-rain-hub",
     deployed_link: "#",
-    technologies: ["React", "Node.js", "MongoDB"],
+    technologies: ["Python", "Pandas", "SQLite", "Streamlit"],
+    featured: true,
   },
 ];
