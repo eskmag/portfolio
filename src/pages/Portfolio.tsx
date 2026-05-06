@@ -1,111 +1,59 @@
-// src/pages/Portfolio.tsx
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { SelectedWork } from "@/components/SelectedWork";
 import { About } from "@/components/About";
-import { TechStack } from "@/components/TechStack";
-import { Projects } from "@/components/Projects";
-import { CV } from "@/components/CV";
-import { BackToTop } from "@/components/BackToTop";
-import { Contact } from "@/components/Contact";
-import { Stats } from "@/components/Stats";
-import { StickyNav } from "@/components/StickyNav";
+import { Experience } from "@/components/Experience";
+import { Now } from "@/components/Now";
+import { Colophon } from "@/components/Colophon";
+import { SideIndex } from "@/components/SideIndex";
+import { DarkModeToggle } from "@/components/DarkModeToggle";
+import { useDarkMode } from "@/hooks/useDarkMode";
+
+const sectionMotion = {
+  initial: { opacity: 0, y: 8 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-15% 0px -15% 0px" },
+  transition: { duration: 0.5, ease: "easeOut" },
+};
 
 const Portfolio: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => setDarkMode(!darkMode);
-
-  // Animation variants for section fade-ins
-  const sectionVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50 
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
+  const [dark, toggleDark] = useDarkMode();
 
   return (
-    <div className={`${darkMode ? "dark bg-gray-900 text-white" : "bg-white text-black"} scroll-smooth`}>
-      <StickyNav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        </div>
-      </section>
+    <div className="min-h-screen bg-paper text-ink transition-colors duration-300 dark:bg-paper-dark dark:text-ink-dark">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-ink focus:px-3 focus:py-2 focus:text-sm focus:text-paper dark:focus:bg-ink-dark dark:focus:text-paper-dark"
+      >
+        Skip to content
+      </a>
 
-      {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4">
-        <motion.section 
-          id="about" 
-          className="py-20"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
+      <div className="fixed right-6 top-6 z-40 lg:hidden">
+        <DarkModeToggle dark={dark} toggle={toggleDark} />
+      </div>
+
+      <SideIndex dark={dark} toggleDark={toggleDark} />
+
+      <main id="main" className="mx-auto max-w-5xl px-6 md:px-16">
+        <Hero />
+
+        <motion.div {...sectionMotion}>
+          <SelectedWork />
+        </motion.div>
+        <motion.div {...sectionMotion}>
           <About />
-        </motion.section>
-
-        {/* Stats Section - Full width background */}
+        </motion.div>
+        <motion.div {...sectionMotion}>
+          <Experience />
+        </motion.div>
+        <motion.div {...sectionMotion}>
+          <Now />
+        </motion.div>
+        <motion.div {...sectionMotion}>
+          <Colophon />
+        </motion.div>
       </main>
-      
-      <Stats />
-      
-      <main className="max-w-4xl mx-auto px-4">
-        <motion.section 
-          id="tech-stack" 
-          className="py-20"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-          <TechStack />
-        </motion.section>
-        
-        <motion.section 
-          id="projects" 
-          className="py-20"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-          <Projects />
-        </motion.section>
-        
-        <motion.section 
-          id="contact" 
-          className="py-20"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-          <Contact />
-        </motion.section>
-        
-        <motion.section 
-          id="cv" 
-          className="py-20 pb-32"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-          <CV />
-        </motion.section>
-      </main>
-      <BackToTop />
     </div>
   );
 };
