@@ -1,59 +1,22 @@
-// src/components/About.tsx
 import React from "react";
-import { motion } from "framer-motion";
+import { SectionHeading } from "@/components/SectionHeading";
 
 export const About: React.FC = () => (
-  <section>
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >
-      <motion.h2 
-        className="text-3xl md:text-4xl font-bold mb-8 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        About Me
-      </motion.h2>
-      <motion.div 
-        className="max-w-3xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center mb-8">
-          I'm an informatics student at the University of Bergen, currently specializing in Data Science. I enjoy working on web development
-          projects, creating clean and accessible user interfaces, and exploring technologies that contribute to sustainable digital
-          solutions.
-        </p>
-        
-        {/* Current Focus */}
-        <motion.div 
-          className="grid md:grid-cols-2 gap-6 mt-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl">
-            <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">🎓 Currently Learning</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Studying how programming languages work, exploring semantic parsing and syntax trees. I am also learning about software architecture and design patterns through game development with Java and LibGDX.
-            </p>
-          </div>
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
-            <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">💡 Interests</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Currently exploring homelabing and learing about self-hosting, as well as working with microcontrollers and embedded systems.
-            </p>
-          </div>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+  <section id="about" className="py-32">
+    <SectionHeading index="03" title="About" />
+
+    <div className="max-w-prose space-y-6 font-serif text-xl leading-relaxed text-ink dark:text-ink-dark md:text-2xl">
+      <p>
+        I'm an informatics student at the University of Bergen, on the data
+        science track. I like working across the stack — from data pipelines
+        to web apps to the occasional embedded project.
+      </p>
+      <p>
+        I work mostly in Python, Java, and TypeScript. I'm drawn to small
+        tools that do one thing well, and to spending time on the parts of a
+        system most people skip — the data layer, the build, the seam between
+        components.
+      </p>
+    </div>
   </section>
 );
