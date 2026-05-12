@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
 import { repos } from "@/data/repos";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ArrowUpRight } from "lucide-react";
 
-const isInternal = (href: string) => href.startsWith("/");
+// const isInternal = (href: string) => href.startsWith("/");
 
 export const SelectedWork: React.FC = () => (
   <section id="work" className="py-32">
