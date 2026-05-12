@@ -34,7 +34,7 @@ export const SelectedWork: React.FC = () => (
             </p>
           </div>
           <div className="col-span-12 flex items-start gap-6 md:col-span-3 md:justify-end">
-            {project.deployed_link && project.deployed_link !== "#" &&
+            {/* {project.deployed_link && project.deployed_link !== "#" &&
               (isInternal(project.deployed_link) ? (
                 <Link
                   to={project.deployed_link}
@@ -51,7 +51,7 @@ export const SelectedWork: React.FC = () => (
                 >
                   Case <ArrowUpRight className="h-3 w-3" />
                 </a>
-              ))}
+              ))} */}
             <a
               href={project.link}
               target="_blank"
@@ -88,7 +88,17 @@ export const SelectedWork: React.FC = () => (
             <div className="col-span-6 font-sans text-xs uppercase tracking-widest text-muted dark:text-muted-dark md:col-span-2 md:self-center">
               {repo.language}
             </div>
-            <div className="col-span-6 flex items-start md:col-span-3 md:justify-end md:self-center">
+            <div className="col-span-6 flex items-start gap-6 md:col-span-3 md:justify-end md:self-center">
+              {repo.demo && (
+                <a
+                  href={repo.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline inline-flex items-center gap-1 text-sm text-ink hover:text-accent dark:text-ink-dark dark:hover:text-accent-dark"
+                >
+                  Live <ArrowUpRight className="h-3 w-3" />
+                </a>
+              )}
               <a
                 href={repo.href}
                 target="_blank"

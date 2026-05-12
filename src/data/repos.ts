@@ -3,16 +3,18 @@ export interface RepoItem {
   description: string;
   language: string;
   href: string;
+  demo?: string;
   tag?: string;
 }
 
 export const repos: RepoItem[] = [
   {
-    name: "hydronic-heating-proposal-system",
-    description: "Profitability analyzer for hydronic heating and heat-pump systems.",
-    language: "Python",
-    href: "https://github.com/eskmag/hydronic-heating-proposal-system",
-    tag: "Climate",
+    name: "coobook-archive",
+    description: "A place to store your favorite recipes and cookbooks.",
+    language: "Typescript, React, Tailwind CSS, Vite",
+    href: "https://github.com/eskmag/cookbook-archive",
+    demo: "https://cookbookarchive.vercel.app",
+    tag: "Cooking",
   },
   {
     name: "climate-dashboard",

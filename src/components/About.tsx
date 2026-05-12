@@ -17,10 +17,6 @@ export const About: React.FC = () => (
         system most people skip — the data layer, the build, the seam between
         components.
       </p>
-      <p>
-        Outside of school I run a small homelab, mess with microcontrollers,
-        and write games in Java to learn how bigger systems fit together.
-      </p>
     </div>
   </section>
 );
