@@ -15,7 +15,7 @@ export const SelectedWork: React.FC = () => (
       {projects.map((project) => (
         <li key={project.title} className="group grid grid-cols-12 gap-4 py-10 md:gap-8">
           <div className="col-span-2 font-sans text-sm tabular-nums text-muted dark:text-muted-dark">
-            2025
+            2026
           </div>
           <div className="col-span-10 md:col-span-7">
             {project.tag && (
