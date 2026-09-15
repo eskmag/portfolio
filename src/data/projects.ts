@@ -12,9 +12,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Emergency Water Supply",
-    description: "A Streamlit app showcasing the potantial for emergency water supply by utilizing rainfall-patterns in Bergen.",
+    description: "A web-app showcasing the potential for emergency water supply from rainwater collection in Bergen.",
     link: "https://github.com/eskmag/bergen-smart-rain-hub",
-    deployed_link: "/case/emergency-water",
+    deployed_link: "https://bergen-smart-rain-hub.onrender.com",
     technologies: ["Python", "Pandas", "SQLite", "Streamlit"],
     tag: "Climate",
     featured: true,

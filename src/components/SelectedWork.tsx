@@ -1,11 +1,11 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
 import { repos } from "@/data/repos";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ArrowUpRight } from "lucide-react";
 
-// const isInternal = (href: string) => href.startsWith("/");
+const isInternal = (href: string) => href.startsWith("/");
 
 export const SelectedWork: React.FC = () => (
   <section id="work" className="py-32">
@@ -34,7 +34,7 @@ export const SelectedWork: React.FC = () => (
             </p>
           </div>
           <div className="col-span-12 flex items-start gap-6 md:col-span-3 md:justify-end">
-            {/* {project.deployed_link && project.deployed_link !== "#" &&
+            {project.deployed_link && project.deployed_link !== "#" &&
               (isInternal(project.deployed_link) ? (
                 <Link
                   to={project.deployed_link}
@@ -49,9 +49,9 @@ export const SelectedWork: React.FC = () => (
                   rel="noopener noreferrer"
                   className="link-underline inline-flex items-center gap-1 text-sm text-ink hover:text-accent dark:text-ink-dark dark:hover:text-accent-dark"
                 >
-                  Case <ArrowUpRight className="h-3 w-3" />
+                  Live <ArrowUpRight className="h-3 w-3" />
                 </a>
-              ))} */}
+              ))}
             <a
               href={project.link}
               target="_blank"
