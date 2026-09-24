@@ -1,27 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { TopBar } from "@/components/TopBar";
 import { Hero } from "@/components/Hero";
-import { SelectedWork } from "@/components/SelectedWork";
-import { About } from "@/components/About";
-import { Experience } from "@/components/Experience";
-import { Now } from "@/components/Now";
-import { Colophon } from "@/components/Colophon";
-import { SideIndex } from "@/components/SideIndex";
-import { DarkModeToggle } from "@/components/DarkModeToggle";
+import { Work } from "@/components/Work";
+import { Desk } from "@/components/Desk";
+import { Log } from "@/components/Log";
+import { Hello } from "@/components/Hello";
 import { useDarkMode } from "@/hooks/useDarkMode";
 
-const sectionMotion = {
-  initial: { opacity: 0, y: 8 },
+const reveal = {
+  initial: { opacity: 0, y: 12 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-15% 0px -15% 0px" },
-  transition: { duration: 0.5, ease: "easeOut" },
+  viewport: { once: true, margin: "-10% 0px -10% 0px" },
+  transition: { duration: 0.6, ease: "easeOut" },
 };
 
 const Portfolio: React.FC = () => {
   const [dark, toggleDark] = useDarkMode();
 
   return (
-    <div className="min-h-screen bg-paper text-ink transition-colors duration-300 dark:bg-paper-dark dark:text-ink-dark">
+    <div className="min-h-screen overflow-x-hidden bg-paper text-ink transition-colors duration-300 dark:bg-paper-dark dark:text-ink-dark">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-ink focus:px-3 focus:py-2 focus:text-sm focus:text-paper dark:focus:bg-ink-dark dark:focus:text-paper-dark"
@@ -29,31 +27,25 @@ const Portfolio: React.FC = () => {
         Skip to content
       </a>
 
-      <div className="fixed right-6 top-6 z-40 lg:hidden">
-        <DarkModeToggle dark={dark} toggle={toggleDark} />
+      <div className="mx-auto max-w-page px-5 sm:px-8 lg:px-12 xl:px-20">
+        <TopBar dark={dark} toggleDark={toggleDark} />
+
+        <main id="main">
+          <Hero />
+          <motion.div {...reveal}>
+            <Work />
+          </motion.div>
+          <motion.div {...reveal}>
+            <Desk />
+          </motion.div>
+          <motion.div {...reveal}>
+            <Log />
+          </motion.div>
+          <motion.div {...reveal}>
+            <Hello />
+          </motion.div>
+        </main>
       </div>
-
-      <SideIndex dark={dark} toggleDark={toggleDark} />
-
-      <main id="main" className="mx-auto max-w-5xl px-6 md:px-16">
-        <Hero />
-
-        <motion.div {...sectionMotion}>
-          <SelectedWork />
-        </motion.div>
-        <motion.div {...sectionMotion}>
-          <About />
-        </motion.div>
-        <motion.div {...sectionMotion}>
-          <Experience />
-        </motion.div>
-        <motion.div {...sectionMotion}>
-          <Now />
-        </motion.div>
-        <motion.div {...sectionMotion}>
-          <Colophon />
-        </motion.div>
-      </main>
     </div>
   );
 };
