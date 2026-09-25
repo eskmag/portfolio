@@ -38,7 +38,7 @@ const CaseEmergencyWater: React.FC = () => {
               Emergency Water Supply.
             </h1>
             <p className="max-w-prose font-serif text-xl leading-relaxed text-muted dark:text-muted-dark md:text-2xl">
-              A small Streamlit tool that models how much of Bergen's annual
+              A tool that models how much of Bergen's annual
               rainfall could be captured and held as emergency drinking-water
               supply during an outage of the municipal system.
             </p>
@@ -109,11 +109,6 @@ const CaseEmergencyWater: React.FC = () => {
               Decisions worth noting
             </h2>
             <ul className="max-w-prose space-y-4 text-lg leading-relaxed text-ink dark:text-ink-dark">
-              <li>
-                <span className="font-medium">Streamlit over a custom frontend.</span>{" "}
-                The tool is exploratory; pinning effort on a polished UI would
-                have starved the modeling work that actually matters.
-              </li>
               <li>
                 <span className="font-medium">SQLite as the persistence layer.</span>{" "}
                 A single-file database keeps the project portable and removes

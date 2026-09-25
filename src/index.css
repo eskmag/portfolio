@@ -9,7 +9,6 @@
 
   body {
     @apply bg-paper text-ink font-sans antialiased;
-    font-feature-settings: "ss01", "cv11";
   }
 
   .dark body {
@@ -17,7 +16,11 @@
   }
 
   section {
-    scroll-margin-top: 3rem;
+    scroll-margin-top: 2rem;
+  }
+
+  ::selection {
+    @apply bg-accent text-paper;
   }
 
   :focus-visible {
@@ -41,6 +44,11 @@
   .link-underline:hover,
   .link-underline:focus-visible {
     background-size: 100% 1px;
+  }
+
+  /* Small monospaced label used for section kickers, tags and annotations */
+  .label {
+    @apply font-mono text-xs tracking-wide text-muted dark:text-muted-dark;
   }
 }
 
