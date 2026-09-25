@@ -21,23 +21,21 @@ export const log: Commit[] = [
     head: true,
   },
   {
-    hash: "7c2d3b8",
-    date: "[year] — now", // TODO: start year
-    message: "work: heating-system quotation software",
-    detail: "modernising and automating a c#/.net desktop app · [company]", // TODO: company
-    draft: true,
-  },
-  {
     hash: "3e91a6f",
     date: "2024 — now",
     message: "feat: start bsc informatics",
     detail: "university of bergen · computer technology · algorithms, databases, programming languages, statistics",
   },
   {
+    hash: "7c2d3b8",
+    date: "2023 — now", 
+    message: "work: customer proposal rep",
+    detail: "creating proposals for heat pump- and hydronic heating solutions · Energiverket AS",
+  },
+  {
     hash: "0000001",
-    date: "[year]", // TODO
+    date: "2023",
     message: "initial commit",
-    detail: "[the first thing you ever built]", // TODO
-    draft: true,
+    detail: "norwegian university of life sciences · programming and dataanalysis course · julia",
   },
 ];

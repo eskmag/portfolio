@@ -59,7 +59,7 @@ export const projects: Project[] = [
     kind: "game · school project",
     status: "in progress",
     description:
-      "A 2D top-down tower-defense game in Java and LibGDX — mostly an excuse to learn system design the fun way.",
+      "A 2D top-down tower-defense game in Java and LibGDX — Team project as part of system development course.",
     technologies: ["Java", "LibGDX"],
     visual: "towers",
   },

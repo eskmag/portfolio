@@ -29,7 +29,7 @@ export const site = {
   email: "eskil.magnussen@gmail.com",
   availability: "Open to software & data internships — summer 2027",
   // Must match the file name in /public/cv exactly: Vercel paths are case-sensitive.
-  cvHref: "/cv/Eskil_Magnussen_CV.pdf",
+  cvHref: "/cv/eskil-magnussen-cv.pdf",
   portrait: "/images/profile-720.jpg",
   socials: [
     { label: "GitHub", href: "https://github.com/eskmag", display: "github/eskmag" },
@@ -39,16 +39,9 @@ export const site = {
 
 /** fig. 1 — the author, parsed. */
 export const parsed: ParsedPhrase[] = [
-  { text: "Eskil", role: "noun", note: "informatics student, UiB" },
-  { text: "writes", role: "verb", note: "python · java · typescript · c#", italic: true },
-  { text: "small, careful software", role: "object", note: "tools that do one thing well" },
-  { text: "and likes", quiet: true },
-  {
-    text: "the parts nobody looks at.",
-    role: "clause",
-    note: "the data layer · the build · the seams between components",
-    emphasis: { before: "the parts ", word: "nobody", after: " looks at." },
-  },
+  { text: "Eskil Magnussen", role: "noun", note: "informatics student, UiB" },
+  { text: "builds", role: "verb", note: "python · java · typescript", italic: true },
+  { text: "software that ships", role: "object", note: "deployed, tested, and used by real people" },
 ];
 
 export const nav: NavLink[] = [
